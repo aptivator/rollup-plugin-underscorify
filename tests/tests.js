@@ -12,14 +12,14 @@ function bundle(options, underscorifyOptions) {
 }
 
 describe('rollup-plugin-underscorify', () => {
-  it('should convert .tpl file into a template function', () => {
+  it('converts .tpl file into a template function', () => {
     return bundle({entry: 'samples/sample.js'}, {include: '**/*.tpl', variable: 'data'}).then(bundle => {
       let {code} = bundle.generate({format: 'iife', moduleName: 'underscorify'});
       new Function('assert', code)(assert);
     });
   });
   
-  it('should produce an empty sourcemap', () => {
+  it('produces an empty sourcemap', () => {
     return bundle({entry: 'samples/sample.js'}, {include: '**/*.tpl', variable: 'data'}).then(bundle => {
       let {code, map} = bundle.generate({sourceMap: true, format: 'es'});
       assert.ok(code);
@@ -27,11 +27,11 @@ describe('rollup-plugin-underscorify', () => {
     });
   });
   
-  it('should error when include is not specified', () => {
+  it('errors when include is not specified', () => {
     assert.throws(() => bundle({entry: 'samples/sample.js'}, {variable: 'data'}), /specify template file extensions/);
   });
   
-  it('should error out when variable is not specified', () => {
+  it('errors when variable is not specified', () => {
     assert.throws(() =>  bundle({entry: 'samples/sample.js'}, {include: '**/*.tpl'}), /specify template namespace variable/);
   });
 });

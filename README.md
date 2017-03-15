@@ -11,13 +11,16 @@ converts underscore templates (included as files) into modules.
 
 ### Usage
 
-* `sample.tpl`
 ```tpl
+  <!-- sample.tpl --> 
+
   <h2>Welcome <%= username %></h2>
 ```
 
-* `sample.js`
+
 ```javascript
+  /* sample.js */
+
   import Marionette from 'backbone.marionette';
   import sampleTpl  from './sample.tpl';
   
@@ -31,9 +34,9 @@ converts underscore templates (included as files) into modules.
 
 ### Build
 
-* `rollup.config.js`
-
 ```javascript
+  /* rollup.config.js */
+
   import underscorify from 'rollup-plugin-underscorify';
   
   export default {
