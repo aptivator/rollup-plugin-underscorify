@@ -2,7 +2,7 @@ import _              from 'underscore';
 import {createFilter} from 'rollup-pluginutils';
 
 export default (options = {}) => {
-  let {exclude, include} = options;
+  let {exclude, include, variable} = options;
   
   if(!include) {
     throw new Error('rollup-plugin-underscorify: specify template file extensions');
@@ -15,7 +15,7 @@ export default (options = {}) => {
     transform(code, id) {
       if(filter(id)) {
         return {
-          code: `export default ${_.template(code)}`,
+          code: `export default ${_.template(code, {variable}).source}`,
           map: {mappings: ''}
         };
       }
