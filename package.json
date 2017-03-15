@@ -1,0 +1,21 @@
+{
+  "name": "rollup-plugin-underscorify",
+  "version": "0.0.1",
+  "description": "A rollup plugin to convert underscore templates into modules",
+  "main": "dist/index.js",
+  "jsnext:main": "dist/index.es.js",
+  "author": "Dmitriy A. Nesterkin",
+  "license": "ISC",
+  "dependencies": {
+    "rollup-pluginutils": "^2.0.1",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "buble": "^0.15.2",
+    "rollup": "^0.41.5",
+    "rollup-plugin-buble": "^0.15.0"
+  },
+  "scripts": {
+    "build": "rollup -c"
+  }
+}
