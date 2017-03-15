@@ -1,5 +1,5 @@
 /* globals assert */
 
-import sampleTpl from './templates/sample.tpl';
+import sampleTpl from './templates/sample.html';
 
 assert.equal(sampleTpl({username: 'Dmitriy'}).trim(), '<h2>Welcome Dmitriy</h2>');

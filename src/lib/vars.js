@@ -1,5 +1,7 @@
-const moduleName = 'rollup-plugin-underscorify';
+const includeDefault = ['**/*.tpl'];
+const variableDefault = 'data';
 
 export {
-  moduleName
+  includeDefault,
+  variableDefault
 };

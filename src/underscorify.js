@@ -1,18 +1,10 @@
 import _              from 'underscore';
 import {createFilter} from 'rollup-pluginutils';
-import errorer        from './lib/errorer';
+
+import {includeDefault, variableDefault} from './lib/vars';
 
 export default (options = {}) => {
-  let {exclude, include, variable} = options;
-  
-  if(!include) {
-    errorer('specify template file extensions');
-  }
-  
-  if(!variable) {
-    errorer('specify template namespace variable');
-  }
-  
+  let {exclude, include = includeDefault, variable = variableDefault} = options;
   let filter = createFilter(include, exclude);
   
   return {
@@ -20,7 +12,7 @@ export default (options = {}) => {
     transform(code, id) {
       if(filter(id)) {
         return {
-          code: `export default ${_.template(code, {variable}).source}`,
+          code: `export default ${_.template(code, {variable}).source};`,
           map: {mappings: ''}
         };
       }
