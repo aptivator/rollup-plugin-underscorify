@@ -5,7 +5,7 @@ let pkgJson = require('./package.json');
 let {'jsnext:main': jsnext, main} = pkgJson;
 
 export default {
-  entry: 'index.js',
+  entry: 'src/underscorify.js',
   plugins: [
     resolver(),
     buble()

@@ -1,11 +1,16 @@
 import _              from 'underscore';
 import {createFilter} from 'rollup-pluginutils';
+import errorer        from './lib/errorer';
 
 export default (options = {}) => {
   let {exclude, include, variable} = options;
   
   if(!include) {
-    throw new Error('rollup-plugin-underscorify: specify template file extensions');
+    errorer('specify template file extensions');
+  }
+  
+  if(!variable) {
+    errorer('specify template namespace variable');
   }
   
   let filter = createFilter(include, exclude);

@@ -2,8 +2,8 @@
   "name": "rollup-plugin-underscorify",
   "version": "0.0.1",
   "description": "A rollup plugin to convert underscore templates into modules",
-  "main": "dist/index.js",
-  "jsnext:main": "dist/index.es.js",
+  "main": "dist/underscorify.js",
+  "jsnext:main": "dist/underscorify.es.js",
   "author": "Dmitriy A. Nesterkin",
   "license": "GPLv3",
   "repository": {
