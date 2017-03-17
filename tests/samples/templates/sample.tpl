@@ -1,1 +1,1 @@
-<h2>Welcome <%= data.username %></h2>
+<h2>Welcome <%= p.username %></h2>

@@ -27,17 +27,15 @@ describe('rollup-plugin-underscorify', () => {
   it('converts a template file into a template function (using custom settings)', () => {
     return bundle({entry: 'samples/sample-custom.js'}, {include: '**/*.html', variable: 'sources'}).then(bundle => {
       let {code} = generator(bundle);
-      new Function('assert', code)(assert);
+      new Function('assert', '_', code)(assert, _);
     });
   });
   
   it('ignores an otherwise matching file if latter is in exclude', () => {
     return bundle({entry: 'samples/sample-exclude.js'}, {include: '**/*.html', exclude: '**/exclude.html'}).then(bundle => {
       let {modules} = bundle;
-      let excluded = _.filter(modules, module => {
-        return module.id.endsWith('/samples/templates/exclude.html');
-      })[0];
-      assert.equal(excluded.code, '');
+      let excluded = _.filter(modules, module => module.id.endsWith('/samples/templates/exclude.html'))[0];
+      assert.equal(excluded.code.trim(), 'export default null;');
     });
   });
   

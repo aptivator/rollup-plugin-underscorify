@@ -1,5 +1,5 @@
 const includeDefault = ['**/*.tpl'];
-const variableDefault = 'data';
+const variableDefault = 'p';
 
 export {
   includeDefault,

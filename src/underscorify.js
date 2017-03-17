@@ -1,7 +1,7 @@
 import _              from 'underscore';
 import {createFilter} from 'rollup-pluginutils';
 
-import {includeDefault, variableDefault} from './lib/vars';
+import {includeDefault, variableDefault} from './lib/consts';
 
 export default (options = {}) => {
   let {exclude, include = includeDefault, variable = variableDefault} = options;

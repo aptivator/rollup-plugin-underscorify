@@ -5,7 +5,7 @@
   "main": "dist/underscorify.js",
   "jsnext:main": "dist/underscorify.es.js",
   "author": "Dmitriy A. Nesterkin",
-  "license": "GPLv3",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/aptivator/rollup-plugin-underscorify.git"
@@ -13,6 +13,7 @@
   "bugs": {
     "url": "https://github.com/aptivator/rollup-plugin-underscorify/issues"
   },
+  "keywrods": [],
   "dependencies": {
     "rollup-pluginutils": "^2.0.1",
     "underscore": "^1.8.3"
@@ -22,10 +23,12 @@
     "buble": "^0.15.2",
     "mocha": "^3.2.0",
     "rollup": "^0.41.5",
+    "rollup-plugin-babel": "^2.7.1",
     "rollup-plugin-buble": "^0.15.0"
   },
   "scripts": {
     "build": "rollup -c",
+    "pretest": "npm run build",
     "test": "mocha tests/*.js --compilers js:buble/register"
   }
 }
