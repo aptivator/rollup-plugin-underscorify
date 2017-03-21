@@ -3,7 +3,7 @@
 ### Introduction
 
 The plugin was written for [Backbone]- and [Marionette]-based applications and 
-converts [underscore]&nbsp;static templates into template funciton modules.
+converts [underscore]&nbsp;static templates into template function modules.
 
 ### Installation
 
@@ -106,7 +106,6 @@ let tplObject = {
 let html = linksTpl(tplObject);
 
 $('#side-bar').append(html);
-
 ```
 
 When working with frameworks such as [Backbone]&nbsp;or [Marionette]&nbsp;that 
