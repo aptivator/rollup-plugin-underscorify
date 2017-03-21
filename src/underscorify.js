@@ -11,10 +11,11 @@ export default (options = {}) => {
     name: 'underscorify',
     transform(code, id) {
       if(filter(id)) {
-        code = code.replace(/(_\.escape\()/, `${variable}.$1`);
+        code = _.template(code, {variable}).source;
+        code = code.replace(/(_\.escape\()/g, `${variable}.$1`);
         
         return {
-          code: `export default ${_.template(code, {variable}).source};`,
+          code: `export default ${code};`,
           map: {mappings: ''}
         };
       }
