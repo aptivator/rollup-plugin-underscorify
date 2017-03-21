@@ -1,6 +1,6 @@
 {
   "name": "rollup-plugin-underscorify",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A rollup plugin to convert underscore templates into modules",
   "main": "dist/underscorify.js",
   "jsnext:main": "dist/underscorify.es.js",
