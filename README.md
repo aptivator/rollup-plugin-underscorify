@@ -55,7 +55,7 @@ For example, the following data object is passed to the template function:
 ```javascript
 let data = {
   username: 'username',
-  city: 'Blacksburg, VA`
+  city: 'Blacksburg, VA'
 };
 ```
 
