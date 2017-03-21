@@ -4,6 +4,7 @@
   "description": "A rollup plugin to convert underscore templates into modules",
   "main": "dist/underscorify.js",
   "jsnext:main": "dist/underscorify.es.js",
+  "module": "dist/underscorify.es.js",
   "author": "Dmitriy A. Nesterkin",
   "license": "MIT",
   "repository": {
@@ -13,7 +14,12 @@
   "bugs": {
     "url": "https://github.com/aptivator/rollup-plugin-underscorify/issues"
   },
-  "keywrods": [],
+  "keywords": [
+    "rollup",
+    "plugin",
+    "underscore",
+    "templates"
+  ],
   "dependencies": {
     "rollup-pluginutils": "^2.0.1",
     "underscore": "^1.8.3"
