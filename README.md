@@ -7,7 +7,7 @@ converts [underscore]&nbsp;static templates into template function modules.
 
 ### Installation
 
-`npm install rollup-plugin-underscorify --save`
+`npm install rollup-plugin-underscorify --save-dev`
 
 ### Build example
 
