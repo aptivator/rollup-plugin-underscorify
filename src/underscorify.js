@@ -1,10 +1,10 @@
 import _              from 'underscore';
 import {createFilter} from 'rollup-pluginutils';
 
-import {includeDefault, variableDefault} from './lib/consts';
+import * as df from './lib/consts';
 
 export default (options = {}) => {
-  let {exclude, include = includeDefault, variable = variableDefault} = options;
+  let {exclude = df.exclude, include = df.include, variable = df.variable} = options;
   let filter = createFilter(include, exclude);
   
   return {

@@ -1,7 +1,9 @@
-const includeDefault = ['**/*.tpl'];
-const variableDefault = 'p';
+const include = ['**/*.tpl'];
+const exclude = 'node_modules/**';
+const variable = 'p';
 
 export {
-  includeDefault,
-  variableDefault
+  include,
+  exclude,
+  variable
 };

@@ -34,7 +34,7 @@ export default {
 that are converted to underscore templates (default: `['**/*.tpl']`)
 
 * **exclude**: specifies a minimatch pattern to determine the template files
-that are ignored by the plugin (default: `undefined`)
+that are ignored by the plugin (default: `node_modules/**`)
 
 * **variable**: sets a namespace variable that is used within a template 
 function to access other data objects passed to the function (default value: 
